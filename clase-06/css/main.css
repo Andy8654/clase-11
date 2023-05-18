@@ -1,0 +1,107 @@
+/*Reset*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Propiedades de la caja */
+
+.caja{
+    display: grid;
+    /*Columnas*/
+    grid-template-columns: repeat(2, 1fr) ;
+    /*Filas*/
+    grid-template-rows: 150px 250px ;
+
+    gap: 10px 30px;
+
+    
+}
+
+/*Propiedades de hijo*/
+
+.hijos-uno{
+    background-color: tomato;
+}
+
+.hijos-dos{
+    background-color: rgb(99, 56, 48);
+}
+
+.hijos-dos{
+    background-color: rgb(61, 46, 43);
+}
+
+.hijos-tres{
+    background-color: rgb(116, 64, 54);
+}
+.hijos-cuatro{
+    background-color: rgb(204, 92, 72);
+}
+
+/*Codigo de ejemplo uno*/
+
+.contenedor{
+    height: 600px;
+    background-color: tomato;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2, 1fr);
+    
+    /* La justificacion */
+
+    justify-items: center;
+    align-items: start ;
+}
+
+.item-uno{
+    background-color: rgb(90, 43, 90);
+    justify-self: end ;
+    align-self: center ;
+}
+.item-cuatro{
+    background-color: rgb(90, 43, 90);
+    justify-self: end ;
+    align-self: center ;
+}
+
+/* JUSTIFY HORIZONTAL SELF ALIGN VERTICAL*/
+
+/*Ejemplo dos*/
+.contain{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 0.5fr 2fr 1fr 0.5fr ;
+    grid-template-areas: 
+        "header header header"
+        "main main section"
+        "main main aside"
+        "footer footer footer";
+    gap: 5px;    
+
+
+    
+}
+header{
+    background-color: tomato;
+    grid-area: header;
+}
+main{
+    background-color: rgb(197, 153, 145);
+    grid-area: main;
+}
+section{
+    background-color: rgb(179, 82, 65);
+    grid-area: section;
+}
+aside{
+    background-color: rgb(105, 50, 40);
+    grid-area: aside;
+}
+footer{
+    background-color: rgb(110, 40, 27);
+    grid-area: footer;
+}
